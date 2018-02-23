@@ -28,6 +28,7 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
+      - run: npm run seed-data
 
       - save_cache:
           paths:
