@@ -1,0 +1,40 @@
+{
+  "name": "FoodiGo-Picture-Component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js",
+    "seed-data": "node database-mongo/index.js",
+    "test": "jest"
+  },
+  "author": "Matt Mullen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.0",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.0",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.17.2",
+    "eslint-plugin-jest": "^21.12.2",
+    "express": "^4.15.0",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.8.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^16.2.0"
+  }
+}
