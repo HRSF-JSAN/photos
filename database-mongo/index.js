@@ -36,7 +36,7 @@ const populate = (restaurant) => {
       });
       savedData.save();
     });
-    res.send('Data seeded');
+    res.end('Data seeded');
   };
   seedData();
 };
