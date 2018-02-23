@@ -15,14 +15,7 @@ test('Should all have an array of 3 picture urls', (done) => {
   });
 });
 // tests a select for a single resturant id
-test('Should all have an array of 3 picture urls', (done) => {
-  select.selectAll((err, data) => {
-    const pictureArr = JSON.parse(data[0].pictures);
-    expect(pictureArr.length).toBe(3);
-    done();
-  });
-});
-test('Should have the same 3 picture urls', (done) => {
+test('Should have the same 3 picture urls on every request', (done) => {
   select.selectAll((err, data) => {
     const pictureUrls = JSON.parse(data[50].pictures);
     expect(pictureUrls + '').toBe('https://s3-us-west-1.amazonaws.com/foodigo/pizza1.jpg,https://s3-us-west-1.amazonaws.com/foodigo/pizza7.jpg,https://s3-us-west-1.amazonaws.com/foodigo/pizza11.jpg');
