@@ -18,7 +18,7 @@ test('Should all have an array of 3 picture urls', (done) => {
 test('Should have the same 3 picture urls on every request', (done) => {
   select.selectAll((err, data) => {
     const pictureUrls = JSON.parse(data[50].pictures);
-    expect(pictureUrls + '').toBe('https://s3-us-west-1.amazonaws.com/foodigo/pizza1.jpg,https://s3-us-west-1.amazonaws.com/foodigo/pizza7.jpg,https://s3-us-west-1.amazonaws.com/foodigo/pizza11.jpg');
+    expect(pictureUrls + '').toBe('https://s3-us-west-1.amazonaws.com/foodigo/italian3.jpg,https://s3-us-west-1.amazonaws.com/foodigo/italian8.jpg,https://s3-us-west-1.amazonaws.com/foodigo/italian4.jpg');
     done();
   });
 });
