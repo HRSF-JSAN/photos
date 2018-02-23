@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const data = require('../data.js');
 
 mongoose.connect('mongodb://localhost/pictures');
 
@@ -35,9 +34,8 @@ const populate = (restaurant) => {
     });
     savedData.save();
   });
-  process.exit();
+  db.close();
 };
-populate(data);
 
 const selectAll = (callback) => {
   Restaurant.find({}, (err, items) => {
@@ -49,4 +47,5 @@ const selectAll = (callback) => {
   });
 };
 
+module.exports.populate = populate;
 module.exports.selectAll = selectAll;
