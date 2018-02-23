@@ -27,7 +27,6 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run: webpack
       - run: npm run server-dev
       - run: npm run mongod
       - run: npm run seed-data
