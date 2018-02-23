@@ -26,17 +26,20 @@ const itemSchema = mongoose.Schema({
 const Restaurant = mongoose.model('restaurant', itemSchema);
 
 const populate = (restaurant) => {
-  restaurant.forEach((obj) => {
-    const savedData = new Restaurant({
-      id: obj.id,
-      pictures: JSON.stringify(obj.pictures),
-      foodType: obj.foodType,
-      name: obj.name,
-      comment: obj.comment,
+  const seedData = (req, res) => {
+    restaurant.forEach((obj) => {
+      const savedData = new Restaurant({
+        id: obj.id,
+        pictures: JSON.stringify(obj.pictures),
+        foodType: obj.foodType,
+        name: obj.name,
+        comment: obj.comment,
+      });
+      savedData.save();
     });
-    savedData.save();
-  });
-  restaurant.end('Data seeded');
+    res.send('Data seeded');
+  };
+  seedData();
 };
 populate(data);
 
