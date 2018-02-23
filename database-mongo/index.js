@@ -27,7 +27,7 @@ const populate = (resturants) => {
   resturants.forEach((obj) => {
     const savedData = new Resturant({
       id: obj.id,
-      pictures: obj.pictures,
+      pictures: JSON.stringify(obj.pictures),
       foodType: obj.foodType,
       name: obj.name,
       comment: obj.comment,
@@ -47,4 +47,4 @@ const selectAll = (callback) => {
   });
 };
 
-exports.selectAll = selectAll;
+module.exports.selectAll = selectAll;
