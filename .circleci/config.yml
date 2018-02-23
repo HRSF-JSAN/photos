@@ -10,6 +10,7 @@ jobs:
       - image: circleci/node:8.9.1
       - image: mongo:2.6.8
         command: [mongod]
+        command: [npm run seed-data]
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -28,7 +29,6 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run: npm run seed-data
 
       - save_cache:
           paths:
