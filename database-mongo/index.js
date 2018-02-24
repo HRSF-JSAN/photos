@@ -24,6 +24,7 @@ const itemSchema = mongoose.Schema({
 const Restaurant = mongoose.model('restaurant', itemSchema);
 
 module.exports.populate = (restaurants) => {
+  let counter = 0;
   restaurants.forEach((obj) => {
     const savedData = new Restaurant({
       id: obj.id,
@@ -32,11 +33,16 @@ module.exports.populate = (restaurants) => {
       name: obj.name,
       comment: obj.comment,
     });
-    savedData.save();
+    savedData.save((err) => {
+      if (err) {
+        throw err;
+      }
+      counter += 1;
+      if (counter === 100) {
+        db.close();
+      }
+    });
   });
-  setTimeout(() => {
-    db.close();
-  }, 500);
 };
 
 const selectAll = (callback) => {
