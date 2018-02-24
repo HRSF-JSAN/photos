@@ -23,8 +23,8 @@ const itemSchema = mongoose.Schema({
 
 const Restaurant = mongoose.model('restaurant', itemSchema);
 
-module.exports.populate = (restaurant) => {
-  restaurant.forEach((obj) => {
+module.exports.populate = (restaurants) => {
+  restaurants.forEach((obj) => {
     const savedData = new Restaurant({
       id: obj.id,
       pictures: JSON.stringify(obj.pictures),
@@ -34,7 +34,9 @@ module.exports.populate = (restaurant) => {
     });
     savedData.save();
   });
-  db.close();
+  setTimeout(() => {
+    db.close();
+  }, 500);
 };
 
 const selectAll = (callback) => {
@@ -46,6 +48,5 @@ const selectAll = (callback) => {
     }
   });
 };
-
 
 module.exports.selectAll = selectAll;
