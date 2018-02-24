@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const data = require('../data.js');
 
 mongoose.connect('mongodb://localhost/pictures');
 
@@ -24,8 +23,9 @@ const itemSchema = mongoose.Schema({
 
 const Restaurant = mongoose.model('restaurant', itemSchema);
 
-const populate = (restaurant) => {
-  restaurant.forEach((obj) => {
+module.exports.populate = (restaurants) => {
+  let counter = 0;
+  restaurants.forEach((obj) => {
     const savedData = new Restaurant({
       id: obj.id,
       pictures: JSON.stringify(obj.pictures),
@@ -33,10 +33,17 @@ const populate = (restaurant) => {
       name: obj.name,
       comment: obj.comment,
     });
-    savedData.save();
+    savedData.save((err) => {
+      if (err) {
+        throw err;
+      }
+      counter += 1;
+      if (counter === 100) {
+        db.close();
+      }
+    });
   });
 };
-populate(data);
 
 const selectAll = (callback) => {
   Restaurant.find({}, (err, items) => {
