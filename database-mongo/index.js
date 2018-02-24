@@ -23,7 +23,7 @@ const itemSchema = mongoose.Schema({
 
 const Restaurant = mongoose.model('restaurant', itemSchema);
 
-const populate = (restaurant) => {
+module.exports.populate = (restaurant) => {
   restaurant.forEach((obj) => {
     const savedData = new Restaurant({
       id: obj.id,
@@ -47,5 +47,5 @@ const selectAll = (callback) => {
   });
 };
 
-module.exports.populate = populate;
+
 module.exports.selectAll = selectAll;
