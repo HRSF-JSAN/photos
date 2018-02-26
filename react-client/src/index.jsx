@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Picture from './components/picture.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Test</h1>
+        <Picture />
       </div>);
   }
 }

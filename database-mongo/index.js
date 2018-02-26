@@ -45,6 +45,16 @@ module.exports.populate = (restaurants) => {
   });
 };
 
+const selectOne = (callback, id) => {
+  Restaurant.find({ id }, (err, items) => {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, items);
+    }
+  });
+};
+
 const selectAll = (callback) => {
   Restaurant.find({}, (err, items) => {
     if (err) {
@@ -55,4 +65,5 @@ const selectAll = (callback) => {
   });
 };
 
+module.exports.selectOne = selectOne;
 module.exports.selectAll = selectAll;

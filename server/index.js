@@ -1,11 +1,13 @@
+const items = require('../database-mongo');
 const express = require('express');
 const bodyParser = require('body-parser');
-const items = require('../database-mongo');
 const path = require('path');
+const router = require('./router.js');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use('/', router);
 app.use(express.static(path.join(__dirname, '/../react-client/dist')));
 
 app.get('/pictures', (req, res) => {
