@@ -8,8 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg'],
-      comment: ['Wow food was so good'],
-      name: ['Airyque Ervin'],
+      comment: ['I have never had a bad experience when I am here', 'This is my go-to resturant', 'We come here 5 times a week it is so good'],
+      name: ['Josh Alamillo', 'Nicholas Peyrichou', 'Mat Bagnall'],
     };
   }
 
@@ -22,8 +22,8 @@ class App extends React.Component {
     ajax.get((data) => {
       this.setState({
         pictures: JSON.parse(data[0].pictures),
-        comment: data[0].comment,
-        name: data[0].name,
+        comment: JSON.parse(data[0].comment),
+        name: JSON.parse(data[0].name),
       });
     }, id);
   }

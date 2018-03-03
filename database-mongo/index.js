@@ -30,8 +30,8 @@ module.exports.populate = (restaurants) => {
       id: obj.id,
       pictures: JSON.stringify(obj.pictures),
       foodType: obj.foodType,
-      name: obj.name,
-      comment: obj.comment,
+      name: JSON.stringify(obj.name),
+      comment: JSON.stringify(obj.comment),
     });
     savedData.save((err) => {
       if (err) {
