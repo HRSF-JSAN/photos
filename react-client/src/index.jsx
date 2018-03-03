@@ -2,4 +2,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
 
-ReactDOM.render(<App id={'proxy will pass number in here'}/>, document.getElementById('app'));
+// proxy will pass number in here
+ReactDOM.render(<App id={101} />, document.getElementById('app'));
