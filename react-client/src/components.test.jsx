@@ -17,7 +17,7 @@ describe('App', () => {
 });
 
 describe('Picture', () => {
-  const picture = mount(<Picture pictures={['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg']} />);
+  const picture = mount(<Picture name={['Josh Alamillo', 'Nicholas Peyrichou', 'Mat Bagnall']} comment={['I have never had a bad experience when I am here', 'This is my go-to resturant', 'We come here 5 times a week it is so good']} pictures={['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg']} />);
 
   test('Picture should have props', () => {
     expect(picture.props).toBeDefined();
