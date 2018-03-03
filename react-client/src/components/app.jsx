@@ -8,8 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg'],
-      comment: 'Wow food was so good',
-      name: 'Airyque Ervin',
+      comment: ['Wow food was so good'],
+      name: ['Airyque Ervin'],
     };
   }
 
