@@ -10,7 +10,6 @@
     "seed-data": "node database-mongo/seedData.js",
     "test": "jest",
     "coverage": "jest --coverage"
-
   },
   "author": "Matt Mullen",
   "license": "ISC",
@@ -20,6 +19,8 @@
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -36,8 +37,9 @@
     "express": "^4.15.0",
     "jquery": "^3.1.1",
     "mongoose": "^4.8.6",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
     "supertest": "^3.0.0"
   }

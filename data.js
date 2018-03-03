@@ -1,7 +1,7 @@
 module.exports = [
   {
     id: 101,
-    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian1.jpg'],
+    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg'],
     foodType: 'Italian',
     name: 'Airyque Ervin',
     comment: 'Wow food was so good',
@@ -372,7 +372,7 @@ module.exports = [
   },
   {
     id: 154,
-    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian1.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian7.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian10.jpg'],
+    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/italian+1.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian7.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/italian10.jpg'],
     foodType: 'Italian',
     name: 'Michael Ngo',
     comment: 'This is my go-to resturant',
@@ -547,14 +547,14 @@ module.exports = [
   },
   {
     id: 179,
-    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/french7.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french1.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french1.jpg'],
+    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/french7.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french3.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french1.jpg'],
     foodType: 'French',
     name: 'Javier Enriquez',
     comment: 'We come here 5 times a week it is so good',
   },
   {
     id: 180,
-    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/french5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french5.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french5.jpg'],
+    pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/french2.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french6.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/french5.jpg'],
     foodType: 'French',
     name: 'Josh Glandorf',
     comment: 'This is my go-to resturant',
@@ -697,6 +697,6 @@ module.exports = [
     pictures: ['https://s3-us-west-1.amazonaws.com/foodigo/mexican14.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/mexican1.jpg', 'https://s3-us-west-1.amazonaws.com/foodigo/mexican16.jpg'],
     foodType: 'Mexican',
     name: 'Namson Leung',
-    comment: 'undefinedSo much food and soooo good',
+    comment: 'So much food and soooo good',
   },
 ];

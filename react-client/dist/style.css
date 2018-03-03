@@ -1,0 +1,8 @@
+.pictures:hover {
+  transform: scale(1.1);
+ }
+.comment {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
