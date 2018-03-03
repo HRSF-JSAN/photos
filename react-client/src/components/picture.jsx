@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 const Picture = props => (
   <div>
-    {props.pictures.map(picture =>
-      <img className="pictures" alt="" src={picture} style={{ width: '250px', height: '250px' }} />)}
-    <p className="comment">{props.comment} <br /> by: {props.name} </p>
+    {props.pictures.map((picture) => {
+      return <div className="container">
+      <img className="pictures" alt="" src={picture} style={{ width: '250px', height: '250px' }} />
+        <p className="comment">{props.comment} <br /> by: {props.name} </p>
+      </div> })}
   </div>
 );
 
