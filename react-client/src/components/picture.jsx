@@ -10,7 +10,7 @@ const Picture = props => (
             <br /> by: {props.name[props.pictures.indexOf(picture)]}
           </p>
         </div>
-      })};
+      })}
   </div>
 );
 
