@@ -7,7 +7,6 @@ const ajax = {
       type: 'GET',
       dataType: 'json',
       success: (data) => {
-        console.log(data)
         cb(data);
       },
       error: (err) => {
