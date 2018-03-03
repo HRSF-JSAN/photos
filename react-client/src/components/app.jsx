@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Picture from './picture';
 import ajax from '../ajax';
 
@@ -30,9 +31,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Picture pictures={this.state.pictures} comment={this.state.comment} name={this.state.name}/>
+        <Picture
+          pictures={this.state.pictures}
+          comment={this.state.comment}
+          name={this.state.name}
+        />
       </div>);
   }
 }
+
+App.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default App;
