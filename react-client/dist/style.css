@@ -1,12 +1,12 @@
 .pictures:hover {
   transform: scale(1.1);
  }
-.container {
+.pictureContainer {
   position: relative;
   display: inline;
+  float: left;
 }
-.comment {
-  position: absolute;
+.pictureComment {
   right: 0;
   bottom: 0;
   left: 0;
