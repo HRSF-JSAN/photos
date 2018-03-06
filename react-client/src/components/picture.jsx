@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Picture = props => (
   <div>
     {props.pictures.map((picture) => {
-      return <div className="container">
+      return <div className="pictureContainer">
         <img className="pictures" alt="" src={picture} style={{ width: '250px', height: '250px' }} />
-          <p className="comment">{props.comment[props.pictures.indexOf(picture)]}
+          <p className="pictureComment">{props.comment[props.pictures.indexOf(picture)]}
             <br /> by: {props.name[props.pictures.indexOf(picture)]}
           </p>
         </div>
