@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/pictures');
+mongoose.connect(process.env.MONGO);
 
 const db = mongoose.connection;
 
