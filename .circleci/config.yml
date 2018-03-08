@@ -9,7 +9,6 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:8.9.1
       - image: mongo:2.6.8
-        command: [mongod]
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -27,7 +26,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm run seed-data
       - run: npm install
 
       - save_cache:

@@ -1,17 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/pictures');
+mongoose.connect(process.env.MONGO);
 
 const db = mongoose.connection;
-
-db.on('error', () => {
-  console.log('mongoose connection error'); // eslint-disable-line
-});
-
-db.once('open', () => {
-  console.log('mongoose connected successfully'); // eslint-disable-line
-});
-
 
 const itemSchema = mongoose.Schema({
   id: { type: Number, unique: true },
