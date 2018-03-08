@@ -26,6 +26,7 @@
 node_modules
 package-lock.json
 coverage
+bundle.js
 
 # Logs and databases #
 ######################
