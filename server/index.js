@@ -14,6 +14,7 @@ app.get('/pictures', (req, res) => {
   items.selectAll((err, data) => {
     if (err) {
       res.sendStatus(404);
+      res.send(err);
     } else {
       res.json(data);
     }

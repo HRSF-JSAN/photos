@@ -8,6 +8,7 @@ router.get('/pictures/:picturesID', (req, res) => {
   items.selectOne((err, data) => {
     if (err) {
       res.sendStatus(404);
+      res.send(err);
     } else {
       res.json(data);
     }
