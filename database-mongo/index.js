@@ -38,25 +38,15 @@ module.exports.populate = (restaurants) => {
 };
 
 const selectOne = (callback, id) => {
-  Restaurant.find({ id }, (err, items) => {
+  Restaurant.findOne({ id }, (err, data) => {
     if (err) {
       callback(err, null);
     } else {
-      callback(null, items);
+      callback(null, [data]);
     }
   });
 };
 
-const selectAll = (callback) => {
-  Restaurant.find({}, (err, items) => {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, items);
-    }
-  });
-};
 
 module.exports.selectOne = selectOne;
-module.exports.selectAll = selectAll;
 module.exports.db = db;
