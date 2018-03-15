@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGO);
+mongoose.connect('mongodb://localhost/photos');
 
 const db = mongoose.connection;
 
-const itemSchema = mongoose.Schema({
+const photosSchema = mongoose.Schema({
   id: { type: Number, unique: true },
   pictures: String,
   foodType: String,
@@ -13,7 +13,7 @@ const itemSchema = mongoose.Schema({
   comment: String,
 });
 
-const Restaurant = mongoose.model('restaurant', itemSchema);
+const Restaurant = mongoose.model('restaurant', photosSchema);
 
 module.exports.populate = (restaurants) => {
   let counter = 0;
@@ -38,24 +38,15 @@ module.exports.populate = (restaurants) => {
 };
 
 const selectOne = (callback, id) => {
-  Restaurant.find({ id }, (err, items) => {
+  Restaurant.findOne({ id }, (err, data) => {
     if (err) {
       callback(err, null);
     } else {
-      callback(null, items);
+      callback(null, [data]);
     }
   });
 };
 
-const selectAll = (callback) => {
-  Restaurant.find({}, (err, items) => {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, items);
-    }
-  });
-};
 
 module.exports.selectOne = selectOne;
-module.exports.selectAll = selectAll;
+module.exports.db = db;

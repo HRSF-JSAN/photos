@@ -7,7 +7,7 @@ import Picture from './components/picture';
 configure({ adapter: new Adapter() });
 
 describe('App', () => {
-  const app = mount(<App />);
+  const app = mount(<App id={123} />);
 
   test('App should be stateful', () => {
     expect(app.state('pictures')).toBeDefined();

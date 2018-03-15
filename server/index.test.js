@@ -4,7 +4,7 @@ const app = require('./index.js');
 // tests the basic connection between the server
 describe('Test the root path', () => {
   test('It should respond to the GET method', async () => {
-    const response = await request(app).get('/');
+    const response = await request(app).get('/pictures/123');
     expect(response.statusCode).toBe(200);
   });
 });

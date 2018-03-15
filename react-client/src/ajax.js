@@ -9,9 +9,6 @@ const ajax = {
       success: (data) => {
         cb(data);
       },
-      error: (err) => {
-        console.error(err); // eslint-disable-line
-      },
     });
   },
 };
