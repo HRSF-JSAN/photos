@@ -23,11 +23,11 @@ const randomComments = (numComments) => {
   return comments;
 };
 
-// check with HIR re: faker.js image url --- always the same url, but generates random photo ?
 const randomPhotos = (numPhotos) => {
   const photos = [];
   for (let i = 0; i < numPhotos; i += 1) {
-    const img = faker.image.imageUrl();
+    const photoName = faker.internet.password();
+    const img = `${faker.image.imageUrl()}/${photoName}.jpg`;
     photos.push(img);
   }
   return photos;
