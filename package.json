@@ -9,7 +9,8 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
     "write-data": "time node mockData/createData.js",
-    "seed-data": "node database-mongo/seedData.js",
+    "mongo-import": "time mongoimport -d photos -c restaurants --type json --file mockData/mockData10Mil.json --numInsertionWorkers 2",
+    "seed-data-basic": "node database-mongo/seedData.js",
     "test": "jest",
     "coverage": "jest --coverage"
   },
