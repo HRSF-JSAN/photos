@@ -1,7 +1,7 @@
 const helpers = require('./generatorHelpers');
 
 const generator = (num) => {
-  const numData = helpers.randomNum(40) + 1;
+  const numData = helpers.randomNum(30) + 1;
 
   const restaurant = {
     id: num,

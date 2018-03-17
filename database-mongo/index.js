@@ -13,6 +13,8 @@ const photosSchema = mongoose.Schema({
   comment: String,
 });
 
+photosSchema.index({ id: 1 }, { unique: true });
+
 const Restaurant = mongoose.model('restaurant', photosSchema);
 
 module.exports.populate = (restaurants) => {
@@ -37,15 +39,9 @@ module.exports.populate = (restaurants) => {
   });
 };
 
-const selectOne = (callback, id) => {
-  Restaurant.findOne({ id }, (err, data) => {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, [data]);
-    }
-  });
-};
+const selectOne = id => (
+  Restaurant.findOne({ id })
+);
 
 
 module.exports.selectOne = selectOne;
