@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const morgan = require('morgan');
 const router = require('./router.js');
 
+
 const app = express();
+app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use('/', router);

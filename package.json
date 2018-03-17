@@ -45,6 +45,7 @@
     "faker": "^4.1.0",
     "jquery": "^3.1.1",
     "mongoose": "^4.8.6",
+    "morgan": "^1.9.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

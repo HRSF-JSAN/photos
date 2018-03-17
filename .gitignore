@@ -27,6 +27,7 @@ node_modules
 package-lock.json
 coverage
 bundle.js
+database-mongo/calculator.js
 
 # Logs and databases #
 ######################
