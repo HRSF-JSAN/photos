@@ -28,6 +28,9 @@ package-lock.json
 coverage
 bundle.js
 database-mongo/calculator.js
+database-mongo/mockData10Mil.json
+database-postgres/picMockData10Mil.csv
+database-postgres/restMockData10Mil.csv
 
 # Logs and databases #
 ######################
@@ -45,7 +48,6 @@ database-mongo/calculator.js
 .Trashes
 ehthumbs.db
 Thumbs.db
-mockData/mockData10Mil.json
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

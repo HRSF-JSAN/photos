@@ -1,7 +1,7 @@
 const fs = require('fs');
-const generator = require('../mockData/generator');
+const generator = require('../mockData/mongoGenerator');
 
-const writeStream = fs.createWriteStream('./mockData/mockData10Mil.json');
+const writeStream = fs.createWriteStream('./database-mongo/mockData10Mil.json');
 
 const write10Mil = (start) => {
   let move = true;

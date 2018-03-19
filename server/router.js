@@ -1,5 +1,5 @@
 const express = require('express');
-const items = require('../database-mongo');
+const items = require('../database-mongo/index');
 
 const router = express.Router();
 
