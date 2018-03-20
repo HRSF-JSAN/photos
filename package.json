@@ -6,17 +6,16 @@
   "scripts": {
     "start": "node server/index.js",
     "start-dev": "nodemon server/index.js",
-    "mongod": "mongod",
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
     "seed-data-basic": "node database-mongo/seedData.js",
     "test": "jest",
-    "coverage": "jest --coverage",
+    "coverage": "jest -- --coverage",
     "write-mongo-data": "time node mockData/mongoCreateData.js",
     "mongo-import": "time mongoimport -d photos -c restaurants --type json --file database-mongo/mockData10Mil.json --numInsertionWorkers 2",
     "migrate": "knex migrate:latest",
     "write-pgPic-data": "time node mockData/pgPicCreateData.js",
-    "write-pgRest-data": "time node mockData/pgRestCreateData.js"
+    "write-pgRest-data": "time node mockData/pgRestCreateData.js",
+    "import-pgsql": "psql photos < database-postgres/insert.sql"
   },
   "author": "Matt Mullen",
   "license": "ISC",
@@ -51,6 +50,7 @@
     "mongoose": "^4.8.6",
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
+    "pg-query": "^0.11.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

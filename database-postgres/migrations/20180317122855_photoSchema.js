@@ -2,7 +2,7 @@ exports.up = (knex, Promise) => (
   Promise.all([
     knex.schema.createTable('restaurants', (table) => {
       table.integer('id').primary();
-      table.string('foodType');
+      table.string('food_type');
     }),
     knex.schema.createTable('pictures', (table) => {
       table.increments('id').primary();
