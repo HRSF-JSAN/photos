@@ -26,9 +26,6 @@ router.get('/pictures/:picturesID', (req, res) => {
       restaurant.name.push(row.user_name);
       restaurant.comment.push(row.comment);
     });
-    restaurant.pictures = JSON.stringify(restaurant.pictures);
-    restaurant.name = JSON.stringify(restaurant.name);
-    restaurant.comment = JSON.stringify(restaurant.comment);
     res.json([restaurant]);
   });
 });

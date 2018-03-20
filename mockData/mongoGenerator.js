@@ -14,10 +14,10 @@ const mongoGenerator = (num) => {
 
   const restaurant = {
     id: num,
-    pictures: JSON.stringify(photos),
+    pictures: photos,
     foodType: helpers.randomFood(),
-    name: JSON.stringify(names),
-    comment: JSON.stringify(comments),
+    name: names,
+    comment: comments,
   };
 
   return restaurant;

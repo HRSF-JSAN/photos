@@ -38,6 +38,7 @@ database-postgres/restMockData10Mil.csv
 *.sql
 *.sqlite
 .env
+newrelic.js
 
 # OS generated files #
 ######################
