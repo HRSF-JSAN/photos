@@ -1,5 +1,4 @@
 const fs = require('fs');
-// const generator = require('../mockData/pgRestGenerator');
 const { randomFood } = require('./generatorHelpers');
 
 const writeStream = fs.createWriteStream('./database-postgres/restMockData10Mil.csv');

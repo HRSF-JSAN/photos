@@ -3,7 +3,7 @@ const select = require('./index');
 test('Should all have an array of at least one photo url', (done) => {
   select.selectOne(1)
     .then((data) => {
-      const pictureArr = JSON.parse(data.pictures);
+      const pictureArr = data.pictures;
       expect(pictureArr.length).toBeGreaterThan(0);
       done();
     })

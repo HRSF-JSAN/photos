@@ -46,6 +46,8 @@
     "eslint-plugin-jest": "^21.12.2",
     "express": "^4.15.0",
     "faker": "^4.1.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
     "jquery": "^3.1.1",
     "knex": "^0.14.4",
     "mongoose": "^4.8.6",
@@ -57,6 +59,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
+    "redis": "^2.8.0",
     "supertest": "^3.0.0"
   }
 }

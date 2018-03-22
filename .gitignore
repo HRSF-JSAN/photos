@@ -31,6 +31,7 @@ database-mongo/calculator.js
 database-mongo/mockData10Mil.json
 database-postgres/picMockData10Mil.csv
 database-postgres/restMockData10Mil.csv
+hello.yml
 ids.csv
 
 # Logs and databases #
