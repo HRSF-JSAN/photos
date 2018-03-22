@@ -13,6 +13,9 @@ const handler = (req, res) => {
   } else if (req.url.slice(0, 10) === '/pictures/') {
     const id = req.url.slice(10);
     router.redisRoute(id, res);
+  } else {
+    res.writeHead(400);
+    res.end();
   }
 };
 

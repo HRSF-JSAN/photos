@@ -16,7 +16,7 @@
     "write-pgPic-data": "time node mockData/pgPicCreateData.js",
     "write-pgRest-data": "time node mockData/pgRestCreateData.js",
     "import-pgsql": "psql photos < database-postgres/insert.sql",
-    "artillery": "artillery run hello.yml"
+    "artillery": "artillery run stressTesting/hello.yml"
   },
   "author": "Matt Mullen",
   "license": "ISC",
