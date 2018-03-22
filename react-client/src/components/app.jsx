@@ -23,9 +23,9 @@ class App extends React.Component {
     const id = resturant;
     ajax.get((data) => {
       this.setState({
-        pictures: JSON.parse(data[0].pictures),
-        comment: JSON.parse(data[0].comment),
-        name: JSON.parse(data[0].name),
+        pictures: data[0].pictures,
+        comment: data[0].comment,
+        name: data[0].name,
       });
     }, id);
   }

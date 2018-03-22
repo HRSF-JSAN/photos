@@ -4,33 +4,20 @@ const randomNum = max => (
   Math.floor(Math.random() * max)
 );
 
-const randomNames = (numNames) => {
-  const names = [];
-  for (let i = 0; i < numNames; i += 1) {
-    const name = faker.name.findName();
-    names.push(name);
-  }
-  return names;
+const randomName = () => (
+  faker.name.findName()
+);
+
+const randomComment = () => {
+  const numSent = randomNum(2);
+  const comment = faker.lorem.sentences(numSent + 1);
+  return comment;
 };
 
-const randomComments = (numComments) => {
-  const comments = [];
-  for (let i = 0; i < numComments; i += 1) {
-    const numSent = randomNum(2);
-    const comment = faker.lorem.sentences(numSent + 1);
-    comments.push(comment);
-  }
-  return comments;
-};
-
-const randomPhotos = (numPhotos) => {
-  const photos = [];
-  for (let i = 0; i < numPhotos; i += 1) {
-    const photoName = faker.internet.password();
-    const img = `${faker.image.imageUrl()}/${photoName}.jpg`;
-    photos.push(img);
-  }
-  return photos;
+const randomPhoto = () => {
+  const photoName = faker.internet.password();
+  const img = `${faker.image.imageUrl()}/${photoName}.jpg`;
+  return img;
 };
 
 const randomFood = () => {
@@ -42,7 +29,7 @@ const randomFood = () => {
 };
 
 module.exports.randomNum = randomNum;
-module.exports.randomNames = randomNames;
-module.exports.randomComments = randomComments;
-module.exports.randomPhotos = randomPhotos;
+module.exports.randomName = randomName;
+module.exports.randomComment = randomComment;
+module.exports.randomPhoto = randomPhoto;
 module.exports.randomFood = randomFood;

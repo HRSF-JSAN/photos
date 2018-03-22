@@ -7,10 +7,10 @@ const db = mongoose.connection;
 
 const photosSchema = mongoose.Schema({
   id: { type: Number, unique: true },
-  pictures: String,
+  pictures: Array,
   foodType: String,
-  name: String,
-  comment: String,
+  name: Array,
+  comment: Array,
 });
 
 photosSchema.index({ id: 1 }, { unique: true });
