@@ -1,5 +1,4 @@
 const fs = require('fs');
-// const generator = require('../mockData/pgPicGenerator');
 const helpers = require('./generatorHelpers');
 
 const writeStream = fs.createWriteStream('./database-postgres/picMockData10Mil.csv');
@@ -17,18 +16,12 @@ const write10Mil = (start) => {
       }
     }
     i -= 1;
-    if (i % 10000 === 0) {
-      console.log(i);
-    }
   }
 
   if (i > 0) {
     writeStream.once('drain', () => {
       write10Mil(i);
     });
-  }
-  if (i === 0) {
-    console.log('Success');
   }
 };
 

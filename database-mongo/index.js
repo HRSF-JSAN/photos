@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/photos');
+mongoose.connect('mongodb://localhost/photos', (err) => {
+  if (err) {
+    console.log('Mongo error:', err);
+  }
+});
 
 const db = mongoose.connection;
 
